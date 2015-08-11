@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+    
+    <head>
+        
+        <title>Scratch</title>
+        
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        
+        <script src=
+"http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+        <script type="text/javascript" src="app.js"></script>
+        
+    </head>
+    
+    <body ng-app="scratchApp" class="container-fluid">
+        
+        <div ng-controller="NameCtrl">
+            
+            <h1>Hello {{name}}!</h1>
+            
+            <p>What's your name?</p>
+            
+            <input type="Text" ng-model=name placeholder="Enter a name here" >
+            
+            <br>
+            <br>
+            
+            <button type="button" class="btn btn-danger" ng-click="toggle()">Suggest</button>
+            
+            <br>
+            
+            <ul ng-hide=tog>
+                <li ng-repeat="each in names | orderBy : 'Country'">
+                    Are you {{each.Name}} from {{each.City}},{{each.Country}} ?
+                </li>
+            </ul>
+            
+        </div>
+        
+    </body>
+</html>

@@ -1,0 +1,42 @@
+<!doctype html>
+
+<html class="container-fluid">
+    
+    <head>
+        
+        <title>Todo App</title>
+        
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <script src=
+"http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+        <script type="text/javascript" src="app.js"></script>
+    </head>
+    
+    <body ng-app="todoApp" ng-controller="todoCtrl" >
+        
+        <h1>ToDo List</h1>
+        
+        <div>
+            <textarea rows="2" cols="50" ng-model="job" ng-click="clear()">{{job}}</textarea>
+            <br>
+            <button ng-click="addJob()" class="btn btn-danger">Add</button>
+            <br>
+            <br>
+        </div>
+        
+        <div ng-repeat="each in joblist track by $index" >
+            <ul>
+                <li >
+                    <label type="radio" ng-click="removeJob($index)">
+                        {{each}}
+                    </label>
+                </li>
+            </ul>
+        </div>
+        
+        <br>
+        <p>Click on task to clear</p>
+        
+    </body>
+    
+</html>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+    
+    <head>
+        
+        <title>Rout</title>
+        
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        
+        <script src=
+"http://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-route.min.js"></script>
+        
+        <script type="text/javascript" src="app.js"></script>
+        
+    </head>
+    
+    <body ng-app="routeApp"  ng-controller="indexCtrl" class="container-fluid">
+        
+        <div class="jumbotron">
+            
+            <div ng-view></div>
+            
+        </div> 
+        
+        <a href={{location}} class="btn btn-danger" ng-click="change()" >Click Me!</a>
+        
+    </body>
+</html>
